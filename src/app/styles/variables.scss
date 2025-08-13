@@ -1,0 +1,22 @@
+// styles/variables.scss
+
+$--dark-color: #000;
+$--dark-secondary-color: #18181b;
+$--white-color: #fff;
+$--primary-color: #7263e2;
+$--primary-color-disable: #c2bdf1;
+$--primary-dark-color: #473c9a;
+$--primary-light-color: rgb(241, 239, 252);
+$--gray-color: #4a4666;
+$--gray-light-color: #e6e6e6;
+$--dark-blue-color: #131028;
+$--purple: #7263e1;
+$--purple-light: #f1effc;
+$--orange-color: #ffd527;
+$--red: red;
+
+$--gray-light-1: #C8D0D3;
+$--bg-light: #F9FAFB;
+
+// Gradient Variables
+$background-gradient: linear-gradient(90deg, $--primary-color 0%, $--primary-dark-color 105.07%);

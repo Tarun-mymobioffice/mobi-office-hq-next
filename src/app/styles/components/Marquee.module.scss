@@ -1,0 +1,89 @@
+.img {
+    height: 70px;
+    width: 175px;
+    object-fit: contain;
+    padding: 5px;
+}
+
+// @import "./../variables.scss";
+// @import "~bootstrap/scss/functions";
+// @import "~bootstrap/scss/variables";
+// @import "~bootstrap/scss/mixins";
+
+// .marquee {
+//   width: var(--marquee-width);
+//   // height: var(--marquee-height);
+//   height: auto;
+//   background: $background-gradient;
+//   color: #eee;
+//   overflow: hidden;
+//   position: relative;
+//   padding: 10px;
+
+//   &:before,
+//   &:after {
+//     position: absolute;
+//     top: 0;
+//     width: 10rem;
+//     height: 100%;
+//     content: "";
+//     z-index: 1;
+//   }
+
+//   &:before {
+//     left: 0;
+//     background: linear-gradient(to right, $--primary-color 0%, transparent 100%);
+//   }
+
+//   &:after {
+//     right: 0;
+//     background: linear-gradient(to left, $--primary-dark-color 0%, transparent 100%);
+//   }
+
+//   .marqueeContent {
+//     list-style: none;
+//     height: 100%;
+//     display: flex;
+//     animation: scrolling var(--marquee-animation-duration) linear infinite;
+//     margin: 0;
+
+//     li {
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       flex-shrink: 0;
+//       width: var(--marquee-element-width);
+//       max-height: 80px;
+//       // font-size: calc(var(--marquee-height) * 3 / 4);
+//       white-space: nowrap;
+
+//       img {
+//         width: calc(var(--marquee-element-width) - 100px) !important;
+//         height: 100% !important;
+
+//         @include media-breakpoint-down(lg) {
+//           max-height: 50px;
+//           width: calc(var(--marquee-element-width) - 30px) !important;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// @keyframes scrolling {
+//   0% {
+//     transform: translateX(0);
+//   }
+//   100% {
+//     transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements)));
+//   }
+// }
+
+// @media (max-width: 600px) {
+//   .marquee {
+//     &:before,
+//     &:after {
+//       width: 5rem;
+//     }
+//   }
+// }

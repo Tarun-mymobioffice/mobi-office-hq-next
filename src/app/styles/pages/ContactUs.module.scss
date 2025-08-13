@@ -1,0 +1,108 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "./../variables.scss";
+
+$--light-gray: #0000001a;
+$--extra-light-gray: #00000005;
+
+.breadcrumb_container {
+  padding: 10px;
+  gap: 10px;
+  border-radius: 8px;
+  border: 1px solid $--light-gray;
+  background: $--purple-light;
+  font-style: normal;
+  line-height: 24px;
+}
+
+.location_contact {
+  .border_right {
+    border-right: 1px solid $--light-gray;
+  }
+
+  .border_left {
+    border-left: 1px solid $--light-gray;
+  }
+
+  .form_label {
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .form_control {
+    padding: 10px;
+    border: 1px solid $--light-gray;
+    background: $--extra-light-gray;
+    font-style: normal;
+    line-height: 20px;
+  }
+
+  @include media-breakpoint-down(md) {
+    .border_right {
+      border-right: none;
+    }
+
+    .border_left {
+      border-left: none;
+    }
+  }
+}
+
+.submit_response {
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 8px;
+  border: 1px solid #41c588;
+  background: #b6e9d1;
+  justify-content: space-between;
+
+  &_main {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    &_logo {
+      display: flex;
+      padding: 12px;
+      align-items: center;
+      gap: 10px;
+      border-radius: 70px;
+      background: #fff;
+      color: #084d2d;
+    }
+
+    &_content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      &_title {
+        color: #084d2d;
+        font-family: Lato;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+      }
+
+      &_desc {
+        color: #0d824b;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+      }
+    }
+  }
+
+  &_close {
+    cursor: pointer;
+    color: #084d2d;
+  }
+}

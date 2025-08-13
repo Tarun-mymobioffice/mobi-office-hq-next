@@ -1,0 +1,40 @@
+.container {
+  min-height: 100vh;
+  background: #14112b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.errorImage {
+  width: 900px;
+  max-width: 98vw;
+  margin-bottom: 24px;
+}
+
+.homeButton {
+  background: #7c7afd;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 32px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(124, 122, 253, 0.2);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.homeButton:hover {
+  background: #5a58c7;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.arrowIcon {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 12px;
+  vertical-align: middle;
+} 

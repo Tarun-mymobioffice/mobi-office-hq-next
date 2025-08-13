@@ -1,0 +1,47 @@
+// styles/ButterBar.module.scss
+
+@import "../variables.scss"; // Import global variables
+
+.top-get-start {
+  padding: 10px 20px;
+  gap: 8px;
+  background: $background-gradient;
+
+  $font-size-small: 14px;
+  $font-weight-bold: 600;
+
+  .left {
+    gap: 12px;
+
+    span {
+      color: $--white-color;
+      font-size: $font-size-small;
+      font-weight: $font-weight-bold;
+    }
+
+    .svg-div {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .right {
+    padding: 4px;
+    gap: 10px;
+    background: $--dark-secondary-color;
+    cursor: pointer;
+
+    span {
+      color: $--white-color;
+      font-size: $font-size-small;
+      font-weight: $font-weight-bold;
+      padding-left: 8px;
+      line-height: 18px;
+    }
+
+    .svg-div {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

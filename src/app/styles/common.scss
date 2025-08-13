@@ -1,0 +1,130 @@
+@import "./variables.scss"; // Import variables
+
+// Create color map
+$colors: (
+  "dark": $--dark-color,
+  "dark-secondary": $--dark-secondary-color,
+  "white": $--white-color,
+  "primary": $--primary-color,
+  "primary-dark": $--primary-dark-color,
+  "primary-light": $--primary-light-color,
+  "gray": $--gray-color,
+  "gray-light": $--gray-light-color,
+  "orange": $--orange-color,
+  "dark-blue": $--dark-blue-color,
+  "purple": $--purple,
+  "purple-light": $--purple-light,
+  "red": $--red,
+  "bg-light": $--bg-light,
+  "gray-light-1": $--gray-light-1,
+
+);
+
+$border-widths: (
+  one: 1px,
+  two: 2px,
+  three: 3px,
+  four: 4px,
+  five: 5px,
+);
+
+$border-radii: (
+  radius-2: 2px,
+  radius-4: 4px,
+  radius-6: 6px,
+  radius-8: 8px,
+  radius-10: 10px,
+  radius-12: 12px,
+  radius-14: 14px,
+  radius-16: 16px,
+);
+
+$font-sizes: (
+  size-8: 8px,
+  size-10: 10px,
+  size-12: 12px,
+  size-14: 14px,
+  size-16: 16px,
+  size-18: 18px,
+  size-20: 20px,
+  size-22: 22px,
+  size-24: 24px,
+  size-26: 26px,
+  size-28: 28px,
+  size-30: 30px,
+  size-32: 32px,
+  size-34: 34px,
+  size-36: 36px,
+  size-38: 38px,
+  size-40: 40px,
+);
+
+.font-family-lato {
+  font-family: Lato, Arial, sans-serif;
+}
+
+.font-family-inter {
+  font-family: Inter, Arial, sans-serif;
+}
+
+// Background color utility classes
+@each $name, $color in $colors {
+  .bg-#{$name} {
+    background-color: #{$color} !important;
+  }
+}
+
+// Text color utility classes
+@each $name, $color in $colors {
+  .text-#{$name} {
+    color: #{$color} !important;
+  }
+}
+
+// Border color utility classes
+@each $name, $color in $colors {
+  .border-#{$name} {
+    border-color: #{$color} !important;
+  }
+}
+
+// Border width utility classes for all sides
+@each $name, $width in $border-widths {
+  .border-#{$name} {
+    border: #{$width} solid transparent;
+  }
+
+  // Border left width utility
+  .border-left-#{$name} {
+    border-left: #{$width} solid transparent;
+  }
+
+  // Border right width utility
+  .border-right-#{$name} {
+    border-right: #{$width} solid transparent;
+  }
+
+  // Border top width utility
+  .border-top-#{$name} {
+    border-top: #{$width} solid transparent;
+  }
+
+  // Border bottom width utility
+  .border-bottom-#{$name} {
+    border-bottom: #{$width} solid transparent;
+  }
+}
+
+// Border radius utility classes
+@each $name, $radius in $border-radii {
+  .border-#{$name} {
+    border-radius: #{$radius} !important;
+  }
+}
+
+// Font size utility classes
+@each $name, $size in $font-sizes {
+  .font-#{$name} {
+    font-size: #{$size} !important;
+  }
+}

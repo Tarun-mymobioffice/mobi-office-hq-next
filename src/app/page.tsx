@@ -1,103 +1,56 @@
-import Image from "next/image";
+import FaqPage from "@/components/faqs";
+import HeroSection from "@/components/hero-section";
+import Marquee from "@/components/marquee";
+import MidSection from "@/components/mid-section";
+import TestimonialCards from "@/components/testimonial";
+import { Int_AccordionItem } from "@/models/types";
+
+const FAQS: Int_AccordionItem[] = [
+  {
+    id: 1,
+    question: "What is the learning curve for using DoubleTick?",
+    answer:
+      "DoubleTick is designed to be user-friendly and intuitive, making it easy for your team to get started. The platform provides comprehensive documentation and support resources to help you learn and use DoubleTick effectively.",
+  },
+  {
+    id: 2,
+    question: "Can I set reminders and notifications for tasks?",
+    answer: "Yes, you can set reminders and notifications to ensure you and your team stay on track and meet deadlines.",
+  },
+  {
+    id: 3,
+    question: "How secure is my data in your task management system?",
+    answer: "We prioritize data security with encryption, secure access controls, and regular backups to protect your information.",
+  },
+  {
+    id: 4,
+    question: "Can DoubleTick integrate with other tools I'm using, such as email and CRM software?",
+    answer: "DoubleTick offers seamless integration with popular business tools, allowing you to streamline your workflows and avoid duplicate data entry.",
+  },
+];
+
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    <>
+    <HeroSection
+    title="AI First Operating System"
+    subtitle="for your Growing Business."
+    description="MobiOffice HQ unifies ERP, CRM, procurement, maintenance, assets, payroll and more so you run faster, see clearer, and control everything from one place."
+    primaryBtnText="Create My HQ"
+    primaryBtnLink="/create-hq"
+    secondaryBtnText="See How It Works"
+    secondaryBtnLink="/how-it-works"
+    imageSrc="/hero.svg"
+    imageAlt="AI Dashboard"
+  />
+  <Marquee />
+  <MidSection />
+  <TestimonialCards />
+  <FaqPage
+  ACCORDION_DATA={FAQS}
+  TITLE="Frequently Asked Questions"
+/>
+  </>
   );
 }

@@ -1,0 +1,419 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/bootstrap"; /* Import Bootstrap SCSS */
+@import "bootstrap-icons/font/bootstrap-icons.css"; /* Import Bootstrap Icons */
+@import "./variables.scss";
+@import "./common.scss";
+@import "tailwindcss";
+
+// :root {
+//   --marquee-width: 100vw;
+//   --marquee-height: 100px;
+//   --marquee-elements-displayed: 7;
+//   --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+//   --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
+
+//   @include media-breakpoint-down(xxl) {
+//     --marquee-width: 100vw;
+//     --marquee-height: 100px;
+//     --marquee-elements-displayed: 6;
+//   }
+
+//   @include media-breakpoint-down(xl) {
+//     --marquee-width: 100vw;
+//     --marquee-height: 100px;
+//     --marquee-elements-displayed: 5;
+//   }
+
+//   @include media-breakpoint-down(lg) {
+//     --marquee-width: 100vw;
+//     --marquee-height: 100px;
+//     --marquee-elements-displayed: 4;
+//   }
+
+//   @include media-breakpoint-down(md) {
+//     --marquee-width: 100vw;
+//     --marquee-height: 100px;
+//     --marquee-elements-displayed: 3;
+//   }
+
+//   @include media-breakpoint-down(sm) {
+//     --marquee-width: 100vw;
+//     --marquee-height: 100px;
+//     --marquee-elements-displayed: 3;
+//   }
+// }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, "Helvetica Neue", sans-serif;
+}
+
+.heading {
+  color: $--dark-secondary-color;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 44px;
+  margin: 0;
+  padding: 0;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.sub-heading {
+  color: $--dark-secondary-color;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+  margin: 0;
+  padding: 0;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.paragraph {
+  color: $--gray-color;
+  text-align: center;
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  margin: 0;
+  padding: 0;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.small-paragraph {
+  color: $--gray-color;
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.section {
+  padding: 60px 100px;
+  max-width: 1600px; // 100%
+
+  &-header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-content {
+    margin-top: 30px;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 40px;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-top: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 40px 20px;
+  }
+}
+
+// Scroll
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, $--primary-color 0%, $--primary-dark-color 105.07%);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $--primary-color;
+}
+
+// Scroll
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, $--primary-color 0%, $--primary-dark-color 105.07%);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $--primary-color;
+}
+
+.bg-patterned {
+  background-color: $--dark-blue-color;
+  background-image: url("/background-pattern-image.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.bg-safeguard {
+  background-color: $--dark-blue-color;
+  background-image: url("/background_erp_data_security.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  .row {
+    min-height: 300px;
+  }
+
+  @include media-breakpoint-down(md) {
+    background-image: url("/background_erp_data_security_mobile.svg");
+  }
+}
+
+.bg-ordermanagementworkflow {
+  background-color: $--dark-blue-color;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  .row {
+    min-height: 330px;
+  }
+
+  // @include media-breakpoint-down(md) {
+  //   background-image: url("/background_erp_data_security_mobile.svg");
+  // }
+}
+
+.accordion-item {
+  border: none;
+  background: none;
+}
+
+.accordion-button:not(.collapsed) {
+  background: none !important;
+  border: none;
+  box-shadow: none;
+}
+
+.accordion-button {
+  color: $--dark-blue-color;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.accordion-body {
+  font-family: Inter;
+  color: $--gray-color;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.carousel.carousel-slider {
+  left: -10% !important;
+  overflow: visible !important;
+}
+
+.carousel .slider-wrapper {
+  overflow: visible !important;
+  width: 80% !important;
+
+  @include media-breakpoint-down(lg) {
+    width: 90% !important;
+  }
+}
+
+.carousel.carousel-slider .control-arrow {
+  background: $--dark-color !important;
+  opacity: 0.5 !important;
+  // right: 14% !important;
+  top: auto !important;
+  bottom: 6% !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 11px !important;
+}
+
+.carousel.carousel-slider .control-arrow :hover {
+  background: $--purple !important;
+  opacity: 1 !important;
+}
+
+.carousel .control-next.control-arrow {
+  right: 16% !important;
+  // top: auto;
+  // bottom: 15%;
+
+  @include media-breakpoint-down(lg) {
+    // right: 16% !important;
+  }
+
+  //   @include media-breakpoint-down(md) {
+  // right: 14% !important;
+  //   }
+}
+
+.carousel .control-prev.control-arrow {
+  right: calc(16% + 50px) !important;
+  left: auto !important;
+  // top: auto;
+  // bottom: 15%;
+
+  @include media-breakpoint-down(lg) {
+    // right: calc(16% + 50px) !important;
+  }
+}
+
+.control-dots,
+.carousel-status {
+  display: none !important;
+}
+
+.offcanvas-body {
+  padding: 0;
+}
+
+.product_features_image_container {
+  min-width: 50px !important;
+  height: 42px;
+
+  img {
+    height: 42px !important;
+    width: 42px !important;
+  }
+}
+
+// marquee components css start
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 10px 0;
+  background: #fff;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+
+  @include media-breakpoint-down(md) {
+    width: 100px;
+  }
+}
+
+.logos:before {
+  left: 0;
+  // background: linear-gradient(to right, $--primary-color 0%, transparent 100%);
+}
+
+.logos:after {
+  right: 0;
+  // background: linear-gradient(to left, $--primary-dark-color 0%, transparent 100%);
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 50px;
+  margin: 0 80px 0 0px;
+}
+// marquee components css end
+
+.breadcrumb {
+  margin-bottom: 0 !important;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  display: none !important;
+}
+
+.breadcrumb-item a {
+  text-decoration: none;
+}

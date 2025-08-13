@@ -1,0 +1,158 @@
+// Core Bootstrap
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+// Your custom variables
+@import "../variables.scss";
+
+$--badge-border: #ffffff1f;
+$--badge-bg: #383454;
+
+.intro_div {
+  max-width: 1600px;
+  .nav_container {
+    .logo_container {
+      gap: 8px;
+    }
+    .login_btn {
+      padding: 10px 30px;
+      background: $--primary-color;
+      color: $--white-color;
+      font-weight: 700;
+      line-height: 20px;
+      cursor: pointer;
+
+      @include media-breakpoint-down(md) {
+        padding: 10px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.intro_content {
+  gap: 32px;
+
+  .intro_1 {
+    color: $--white-color;
+    font-size: 52px;
+    line-height: normal;
+    letter-spacing: 2px;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 48px;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 36px;
+    }
+  }
+
+  .intro_1_orange {
+    color: $--orange-color;
+    font-weight: 600;
+  }
+
+  .intro_2 {
+    color: $--white-color;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 0;
+    font-size: 20px;
+
+    @include media-breakpoint-down(md) {
+      text-align: center;
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 12px;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    gap: 12px;
+  }
+}
+
+.intro_badge {
+  width: fit-content;
+  padding: 4px 8px;
+  border-radius: 110px;
+  border: 1px solid $--badge-border;
+  background: $--badge-bg;
+  gap: 8px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0.48px;
+}
+
+.intro_image {
+  min-width: 550px !important;
+  height: 460px !important;
+
+  img {
+    height: 100% !important;
+    width: 550px !important;
+
+    @include media-breakpoint-down(md) {
+      min-width: 300px !important;
+      height: 100% !important;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    // min-width: 300px !important;
+    height: 260px !important;
+  }
+}
+
+
+.solution_text {
+  color: $--white-color;
+  font-weight: 400;
+  line-height: 60px;
+  margin: 0;
+  font-size: 22px;
+
+  @include media-breakpoint-down(md) {
+    text-align: center;
+    font-size: 30px;
+    line-height: 60px;
+    margin-bottom: 12px;
+  }
+}
+
+.content-area {
+  background-color: #fff;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.section {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.accordion-button {
+  background-color: #f8f9fa;
+  border: none;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #e9ecef;
+  color: #000;
+}
+
+.content-area h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.content-area p, .content-area li {
+  line-height: 1.6;
+}
+
